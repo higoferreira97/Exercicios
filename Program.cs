@@ -247,29 +247,37 @@ namespace ExercicioUm
             //QUADRADO: 16.000
             //RETANGULO: 12.000
 
-
-
             double A, B, C, triangulo, circulo, trapezio, quadrado, retangulo;
 
-            Console.WriteLine("Informe os dados de entrada");
-            string[] areas = Console.ReadLine().Split(' ');
-            A = double.Parse(areas[0],CultureInfo.InvariantCulture);
-            B = double.Parse(areas[1],CultureInfo.InvariantCulture);
-            C = double.Parse(areas[2],CultureInfo.InvariantCulture);
+            Console.WriteLine("Informe os valores correspondentes");
+            string[] valores = Console.ReadLine().Split(' ');
+            A = double.Parse(valores[0]);
+            B = double.Parse(valores[1]);
+            C = double.Parse(valores[2]);
             Console.Clear();
+
 
             triangulo = A * C / 2.0;
             circulo = 3.14159 * C * C;
-            trapezio = (A + B) / 2.0 * C;
+            trapezio = (A + B ) /2.0 * C;
             quadrado = B * B;
             retangulo = A * B;
 
+            Console.WriteLine(triangulo.ToString("F3",CultureInfo.InvariantCulture));
+            Console.WriteLine(circulo.ToString("F3",CultureInfo.InvariantCulture));
+            Console.WriteLine(trapezio.ToString("F3",CultureInfo.InvariantCulture));
+            Console.WriteLine(quadrado.ToString("F3",CultureInfo.InvariantCulture));
+            Console.WriteLine(retangulo.ToString("F3",CultureInfo.InvariantCulture));
 
-            Console.WriteLine("Triângulo: " + triangulo.ToString("F3",CultureInfo.InvariantCulture));
-            Console.WriteLine("Círculo: " + circulo.ToString("F3",CultureInfo.InvariantCulture));
-            Console.WriteLine("Trapézio: " + trapezio.ToString("F3",CultureInfo.InvariantCulture));
-            Console.WriteLine("Quadrado: " + quadrado.ToString("F3",CultureInfo.InvariantCulture));
-            Console.WriteLine("Retângulo: " + retangulo.ToString("F3",CultureInfo.InvariantCulture));
+
+
+
+
+
+
+
+
+            
 
 
 
