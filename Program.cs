@@ -247,29 +247,81 @@ namespace ExercicioUm
             //QUADRADO: 16.000
             //RETANGULO: 12.000
 
-            double A, B, C, triangulo, circulo, trapezio, quadrado, retangulo;
+            //double A, B, C, triangulo, circulo, trapezio, quadrado, retangulo;
 
-            Console.WriteLine("Informe os valores correspondentes");
-            string[] valores = Console.ReadLine().Split(' ');
-            A = double.Parse(valores[0]);
-            B = double.Parse(valores[1]);
-            C = double.Parse(valores[2]);
-            Console.Clear();
-
-
-            triangulo = A * C / 2.0;
-            circulo = 3.14159 * C * C;
-            trapezio = (A + B ) /2.0 * C;
-            quadrado = B * B;
-            retangulo = A * B;
-
-            Console.WriteLine(triangulo.ToString("F3",CultureInfo.InvariantCulture));
-            Console.WriteLine(circulo.ToString("F3",CultureInfo.InvariantCulture));
-            Console.WriteLine(trapezio.ToString("F3",CultureInfo.InvariantCulture));
-            Console.WriteLine(quadrado.ToString("F3",CultureInfo.InvariantCulture));
-            Console.WriteLine(retangulo.ToString("F3",CultureInfo.InvariantCulture));
+            //Console.WriteLine("Informe os valores correspondentes");
+            //string[] valores = Console.ReadLine().Split(' ');
+            //A = double.Parse(valores[0]);
+            //B = double.Parse(valores[1]);
+            //C = double.Parse(valores[2]);
+            //Console.Clear();
 
 
+            //triangulo = A * C / 2.0;
+            //circulo = 3.14159 * C * C;
+            //trapezio = (A + B ) /2.0 * C;
+            //quadrado = B * B;
+            //retangulo = A * B;
+
+            //Console.WriteLine(triangulo.ToString("F3",CultureInfo.InvariantCulture));
+            //Console.WriteLine(circulo.ToString("F3",CultureInfo.InvariantCulture));
+            //Console.WriteLine(trapezio.ToString("F3",CultureInfo.InvariantCulture));
+            //Console.WriteLine(quadrado.ToString("F3",CultureInfo.InvariantCulture));
+            //Console.WriteLine(retangulo.ToString("F3",CultureInfo.InvariantCulture));
+
+            //--------------------------------------------------------------------------------
+
+            //Console.WriteLine("Informe um horário");
+            //int hora = int.Parse(Console.ReadLine());
+
+            //if (hora >= 5 && hora <=11)
+            //{
+            //    Console.WriteLine("Bom dia");
+            //}
+            //else if (hora >= 12 && hora <18)
+            //{
+            //    Console.WriteLine("Boa tarde");
+            //}
+
+            //else 
+            //{
+            //    Console.WriteLine("Boa noite");
+            //}
+
+            //--------------------------------------------------------------------------------
+            //Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não.
+
+            //Console.WriteLine("Informe um número para saber se é verdadeiro ou falso");
+
+            //int numero = int.Parse(Console.ReadLine());
+
+            //if (numero >= 0) 
+            //{
+            //    Console.WriteLine("Número positivo");
+            //}
+
+            //else
+            //{
+            //    Console.WriteLine("Número negativo");
+            //}
+
+            //--------------------------------------------------------------------------------
+            //Fazer um programa para ler um número inteiro e dizer se este número é par ou ímpar
+
+            Console.WriteLine("Informe um número para saber se é par ou impar");
+
+            int numero = int.Parse(Console.ReadLine());
+
+            if (numero % 2 == 0)
+            {
+
+                Console.WriteLine("Par");
+            }
+
+            else 
+            {
+                Console.WriteLine("Impar");
+            }
 
 
 
@@ -277,7 +329,8 @@ namespace ExercicioUm
 
 
 
-            
+
+
 
 
 
