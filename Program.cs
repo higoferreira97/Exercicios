@@ -3,6 +3,9 @@ using System.Data.SqlTypes;
 using System.Drawing;
 using System.Globalization;
 using System.Runtime.ConstrainedExecution;
+using System.Runtime.Intrinsics.Arm;
+using System.Runtime.Intrinsics.X86;
+using System.Security.Cryptography;
 
 
 
@@ -308,23 +311,62 @@ namespace ExercicioUm
             //--------------------------------------------------------------------------------
             //Fazer um programa para ler um número inteiro e dizer se este número é par ou ímpar
 
-            Console.WriteLine("Informe um número para saber se é par ou impar");
+            //Console.WriteLine("Informe um número para saber se é par ou impar");
 
-            int numero = int.Parse(Console.ReadLine());
+            //int numero = int.Parse(Console.ReadLine());
 
-            if (numero % 2 == 0)
-            {
+            //if (numero % 2 == 0)
+            //{
 
-                Console.WriteLine("Par");
-            }
+            //    Console.WriteLine("Par");
+            //}
 
-            else 
-            {
-                Console.WriteLine("Impar");
-            }
+            //else 
+            //{
+            //    Console.WriteLine("Impar");
+            //}
 
 
+            //--------------------------------------------------------------------------------
 
+            //Leia 2 valores inteiros(A e B). Após, o programa deve mostrar uma mensagem "Sao Multiplos" ou "Nao sao
+            //Multiplos", indicando se os valores lidos são múltiplos entre si. Atenção: os números devem poder ser digitados em
+            //ordem crescente ou decrescente
+
+            //Console.WriteLine("Verifique se os número são miultiplos");
+
+            //int A, B;
+            //string[] valores = Console.ReadLine().Split(' ');
+            // A = int.Parse(valores[0]);
+            // B = int.Parse(valores[1]);
+
+            //if (A % B == 0 || B % A == 0)
+            //    Console.WriteLine("São multiplos");
+
+            //else
+            //    Console.WriteLine("Não são multiplos");
+
+            //--------------------------------------------------------------------------------
+
+            //Leia a hora inicial e a hora final de um jogo.A seguir calcule a duração do jogo, sabendo que o mesmo pode
+            //começar em um dia e terminar em outro, tendo uma duração mínima de 1 hora e máxima de 24 horas.
+
+            Console.WriteLine("Informe a hora inicial com número inteiro");
+            int horaInicio = int.Parse(Console.ReadLine());
+            Console.Clear();
+            Console.WriteLine("Informe a hora final com número inteiro");
+            int horaFinal = int.Parse(Console.ReadLine());
+            Console.Clear();
+
+            int duracao;
+            if (horaInicio < horaFinal)
+                duracao = horaFinal - horaInicio;
+            else
+                duracao = 24 - horaInicio + horaFinal;
+
+            Console.WriteLine("O jogo durou:" + duracao + "Horas");
+
+            //--------------------------------------------------------------------------------
 
 
 
