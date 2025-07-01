@@ -351,20 +351,94 @@ namespace ExercicioUm
             //Leia a hora inicial e a hora final de um jogo.A seguir calcule a duração do jogo, sabendo que o mesmo pode
             //começar em um dia e terminar em outro, tendo uma duração mínima de 1 hora e máxima de 24 horas.
 
-            Console.WriteLine("Informe a hora inicial com número inteiro");
-            int horaInicio = int.Parse(Console.ReadLine());
-            Console.Clear();
-            Console.WriteLine("Informe a hora final com número inteiro");
-            int horaFinal = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Informe a hora de inicio:");
+            //int horaInicio = int.Parse(Console.ReadLine());
+            //Console.Clear();
+
+            //Console.WriteLine("Informe a final do jogo:");
+            //int horaFinal = int.Parse(Console.ReadLine());
+            //Console.Clear();
+
+            //int duracao;
+            //if (horaInicio < horaFinal)
+
+            //    duracao = horaFinal - horaInicio;
+
+            //else
+            //    duracao = 24 - horaInicio + horaFinal;
+
+            //Console.WriteLine($"o jogo durou: {duracao} horas.");
+
+            //--------------------------------------------------------------------------------
+            //escreva um programa que leia o código de um item e a quantidade deste item.A
+            //seguir, calcule e mostre o valor da conta a pagar
+
+            //Console.WriteLine("Informe o código do produto e a quantidade");
+            //string[] valores = Console.ReadLine().Split(' ');
+
+            //int codigo = int.Parse(valores[0]);
+            //int quantidade = int.Parse(valores[1]);
+
+            //double total;
+            //if (codigo == 1)
+            //    total = quantidade * 4.00;
+
+            //else if (codigo == 2)
+            //    total = quantidade * 4.50;
+
+            //else if (codigo == 3)
+            //    total = quantidade * 5.00;
+
+            //else if (codigo == 4)
+            //    total = quantidade * 2.00;
+
+            //else
+            //    total = quantidade * 1.50;
+
+            //Console.WriteLine("O valor total é: " + total.ToString("F2",CultureInfo.InvariantCulture));
+
+            //--------------------------------------------------------------------------------
+
+            //Você deve fazer um programa que leia um valor qualquer e apresente uma mensagem dizendo em qual dos
+            //seguintes intervalos([0, 25], (25,50], (50, 75], (75, 100]) este valor se encontra. Obviamente se o valor não estiver em
+            //nenhum destes intervalos, deverá ser impressa a mensagem “Fora de intervalo”
+
+            Console.WriteLine("insira um valor");
+            double valor = double.Parse(Console.ReadLine());
             Console.Clear();
 
-            int duracao;
-            if (horaInicio < horaFinal)
-                duracao = horaFinal - horaInicio;
-            else
-                duracao = 24 - horaInicio + horaFinal;
 
-            Console.WriteLine("O jogo durou:" + duracao + "Horas");
+
+            if (valor < 0.0 || valor > 100.0)
+                Console.WriteLine("Fora de intervalo");
+
+            else if (valor <= 25.0)
+                Console.WriteLine("O intervalor é: [0,25]");
+
+            else if (valor <= 50.0)
+                Console.WriteLine("O intervalo é: [25,50]");
+
+            else if (valor <= 75.0)
+                Console.WriteLine("O intervalo é: [50,75]");
+
+            else if (valor <= 100.0)
+                Console.WriteLine("O intervalo é: [75,100]");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             //--------------------------------------------------------------------------------
 
