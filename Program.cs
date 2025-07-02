@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.Drawing;
 using System.Globalization;
+using System.Net;
+using System.Reflection.Emit;
 using System.Runtime.ConstrainedExecution;
 using System.Runtime.Intrinsics.Arm;
 using System.Runtime.Intrinsics.X86;
@@ -403,38 +406,103 @@ namespace ExercicioUm
             //seguintes intervalos([0, 25], (25,50], (50, 75], (75, 100]) este valor se encontra. Obviamente se o valor não estiver em
             //nenhum destes intervalos, deverá ser impressa a mensagem “Fora de intervalo”
 
-            Console.WriteLine("insira um valor");
-            double valor = double.Parse(Console.ReadLine());
-            Console.Clear();
+            //Console.WriteLine("insira um valor");
+            //double valor = double.Parse(Console.ReadLine());
+            //Console.Clear();
 
 
 
-            if (valor < 0.0 || valor > 100.0)
-                Console.WriteLine("Fora de intervalo");
+            //if (valor < 0.0 || valor > 100.0)
+            //    Console.WriteLine("Fora de intervalo");
 
-            else if (valor <= 25.0)
-                Console.WriteLine("O intervalor é: [0,25]");
+            //else if (valor <= 25.0)
+            //    Console.WriteLine("O intervalor é: [0,25]");
 
-            else if (valor <= 50.0)
-                Console.WriteLine("O intervalo é: [25,50]");
+            //else if (valor <= 50.0)
+            //    Console.WriteLine("O intervalo é: [25,50]");
 
-            else if (valor <= 75.0)
-                Console.WriteLine("O intervalo é: [50,75]");
+            //else if (valor <= 75.0)
+            //    Console.WriteLine("O intervalo é: [50,75]");
 
-            else if (valor <= 100.0)
-                Console.WriteLine("O intervalo é: [75,100]");
+            //else if (valor <= 100.0)
+            //    Console.WriteLine("O intervalo é: [75,100]");
+
+            //----------------------------------------------------------------
+            //Leia 2 valores com uma casa decimal(x e y), que devem representar as coordenadas
+            //de um ponto em um plano. A seguir, determine qual o quadrante ao qual pertence o
+            //ponto, ou se está sobre um dos eixos cartesianos ou na origem(x = y = 0).
+            //Se o ponto estiver na origem, escreva a mensagem “Origem”.
+            //Se o ponto estiver sobre um dos eixos escreva “Eixo X” ou “Eixo Y”, conforme for a
+            //Exemplo
+            //Entrada: 4.5 - 2.2
+            //Saida: Q4
+
+            //string[] valores = Console.ReadLine().Split(' ');
+            //double x = double.Parse(valores[0], CultureInfo.InvariantCulture);
+            //double y = double.Parse(valores[1], CultureInfo.InvariantCulture);
+
+            //if (x == 0.0 && y == 0.0)
+            //    Console.WriteLine("Origem");
+
+            //else if (x == 0.0)
+            //    Console.WriteLine("Eixo Y");
+
+            //else if (y == 0.0)
+            //    Console.WriteLine("Eixo X");
+
+            //else if (x > 0.0 && y > 0.0)
+            //    Console.WriteLine("Q1");
+
+            //else if (x < 0.0 && y > 0.0)
+            //    Console.WriteLine("Q2");
+
+            //else if (x < 0.0 && y < 0.0)
+            //    Console.WriteLine("Q3");
+
+
+            //else
+            //    Console.WriteLine("Q4");
 
 
 
+            //--------------------------------------------------------------------------------
+            //Em um país imaginário denominado Lisarb, todos os habitantes ficam felizes em pagar seus impostos, pois sabem
+            //que nele não existem políticos corruptos e os recursos arrecadados são utilizados em benefício da população, sem
+            //qualquer desvio.A moeda deste país é o Rombus, cujo símbolo é o R$.
+            //Leia um valor com duas casas decimais, equivalente ao salário de uma pessoa de Lisarb. Em seguida, calcule e
+            //mostre o valor que esta pessoa deve pagar de Imposto de Renda, segundo a tabela abaixo.
+            //Renda:
+            // 0.00 - 2000.00  Insento
+            //2000.01 - 3000.00  8%
+            //3000.01 - 4500.00 18%
+            //Acima de 4500 28%
 
+            //Lembre que, se o salário for R$ 3002.00, a taxa que incide é de 8 % apenas sobre R$ 1000.00, pois a faixa de
+            //salário que fica de R$ 0.00 até R$ 2000.00 é isenta de Imposto de Renda.No exemplo fornecido(abaixo), a taxa é
+            //de 8 % sobre R$ 1000.00 + 18 % sobre R$ 2.00, o que resulta em R$ 80.36 no total.O valor deve ser impresso com
+            //duas casas decimais.
 
+            Console.WriteLine("Informe seu salário para ver o quanto você vai pagar de imposto");
+            double salario = double.Parse(Console.ReadLine() ,CultureInfo.InvariantCulture);
 
+            double imposto;
+            if (salario < 2000.0)
+                imposto = 0.0;
 
+            else if (salario <= 3000.0)
+                imposto = (salario - 2000.0) * 0.08;
 
+            else if (salario <= 4500.0)
+                imposto = (salario - 3000.0) * 0.18 + 1000.0 * 0.08;
 
+            else
+                imposto = (salario - 4500.0) * 0.28 + 1500.0 * 0.18 + 1000.0 * 0.08;
 
+            if (imposto == 0.0)
+                Console.WriteLine("Isento");
 
-
+            else
+                Console.WriteLine($"R${imposto.ToString("F2", CultureInfo.InvariantCulture)}");
 
 
 
