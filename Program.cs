@@ -482,28 +482,98 @@ namespace ExercicioUm
             //de 8 % sobre R$ 1000.00 + 18 % sobre R$ 2.00, o que resulta em R$ 80.36 no total.O valor deve ser impresso com
             //duas casas decimais.
 
-            Console.WriteLine("Informe seu salário para ver o quanto você vai pagar de imposto");
-            double salario = double.Parse(Console.ReadLine() ,CultureInfo.InvariantCulture);
+            //Console.WriteLine("Informe seu salário para ver o quanto você vai pagar de imposto");
+            //double salario = double.Parse(Console.ReadLine() ,CultureInfo.InvariantCulture);
 
-            double imposto;
-            if (salario < 2000.0)
-                imposto = 0.0;
+            //double imposto;
+            //if (salario < 2000.0)
+            //    imposto = 0.0;
 
-            else if (salario <= 3000.0)
-                imposto = (salario - 2000.0) * 0.08;
+            //else if (salario <= 3000.0)
+            //    imposto = (salario - 2000.0) * 0.08;
 
-            else if (salario <= 4500.0)
-                imposto = (salario - 3000.0) * 0.18 + 1000.0 * 0.08;
+            //else if (salario <= 4500.0)
+            //    imposto = (salario - 3000.0) * 0.18 + 1000.0 * 0.08;
 
-            else
-                imposto = (salario - 4500.0) * 0.28 + 1500.0 * 0.18 + 1000.0 * 0.08;
+            //else
+            //    imposto = (salario - 4500.0) * 0.28 + 1500.0 * 0.18 + 1000.0 * 0.08;
 
-            if (imposto == 0.0)
-                Console.WriteLine("Isento");
+            //if (imposto == 0.0)
+            //    Console.WriteLine("Isento");
 
-            else
-                Console.WriteLine($"R${imposto.ToString("F2", CultureInfo.InvariantCulture)}");
+            //else
+            //    Console.WriteLine($"R${imposto.ToString("F2", CultureInfo.InvariantCulture)}");
 
+
+
+
+
+            //--------------------------------------------------------------------------------
+            //While
+            //Console.Write("Digite um número:");
+            //double x = double.Parse(Console.ReadLine());
+            //Console.Clear();
+
+            //while (x >= 0)
+            //{
+
+            //    double raiz = Math.Sqrt(x);
+
+            //    Console.WriteLine(raiz.ToString("F3", CultureInfo.InvariantCulture));
+
+            //    Console.Write("Digite outro número.");
+            //    x = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //    Console.Clear();
+            //}
+
+            //Console.WriteLine("Número negativo");
+
+            //--------------------------------------------------------------------------------
+            //Escreva um programa que repita a leitura de uma senha até que ela seja válida.Para cada leitura de senha
+            //incorreta informada, escrever a mensagem "Senha Invalida".Quando a senha for informada corretamente deve ser
+            //impressa a mensagem "Acesso Permitido" e o algoritmo encerrado.Considere que a senha correta é o valor 2002.
+
+            //Console.Write("Digite a senha");
+            //int senha = int.Parse(Console.ReadLine());
+            //Console.Clear();
+
+            //while (senha != 2002)
+            //{
+            //    Console.WriteLine("Senha incorreta!\nTente novamente.");
+            //    senha = int.Parse(Console.ReadLine());
+            //    Console.Clear();
+            //}
+            //Console.WriteLine("Acesso concedido.");
+
+            //--------------------------------------------------------------------------------
+            //Escreva um programa para ler as coordenadas (X, Y) de uma quantidade indeterminada de pontos no sistema
+            //cartesiano.Para cada ponto escrever o quadrante a que ele pertence. O algoritmo será encerrado quando pelo
+            //menos uma de duas coordenadas for NULA(nesta situação sem escrever mensagem alguma).
+
+            string[] valores = Console.ReadLine().Split(' ');
+            int x = int.Parse(valores[0]);
+            int y = int.Parse(valores[1]);
+
+            while (x != 0 && y != 0) {
+                if (x > 0 && y > 0)
+                    Console.WriteLine("Primeiro");
+
+                else if (x < 0 && y > 0)
+                    Console.WriteLine("Segundo");
+
+                else if (x < 0 && y < 0)
+                    Console.WriteLine("Terceiro");
+
+                else
+                    Console.WriteLine("Quarto");
+
+                valores = Console.ReadLine().Split(' ');
+
+                x = int.Parse(valores[0]);
+                y = int.Parse(valores[1]);
+
+            
+            }
 
 
 
