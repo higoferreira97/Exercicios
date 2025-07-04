@@ -550,38 +550,166 @@ namespace ExercicioUm
             //cartesiano.Para cada ponto escrever o quadrante a que ele pertence. O algoritmo será encerrado quando pelo
             //menos uma de duas coordenadas for NULA(nesta situação sem escrever mensagem alguma).
 
-            string[] valores = Console.ReadLine().Split(' ');
-            int x = int.Parse(valores[0]);
-            int y = int.Parse(valores[1]);
+            //string[] valores = Console.ReadLine().Split(' ');
+            //int x = int.Parse(valores[0]);
+            //int y = int.Parse(valores[1]);
 
-            while (x != 0 && y != 0) {
-                if (x > 0 && y > 0)
-                    Console.WriteLine("Primeiro");
+            //while (x != 0 && y != 0)
+            //{
+            //    if (x > 0 && y > 0)
+            //        Console.WriteLine("Primeiro");
 
-                else if (x < 0 && y > 0)
-                    Console.WriteLine("Segundo");
+            //    else if (x < 0 && y > 0)
+            //        Console.WriteLine("Segundo");
 
-                else if (x < 0 && y < 0)
-                    Console.WriteLine("Terceiro");
+            //    else if (x < 0 && y < 0)
+            //        Console.WriteLine("Terceiro");
 
-                else
-                    Console.WriteLine("Quarto");
+            //    else
+            //        Console.WriteLine("Quarto");
 
-                valores = Console.ReadLine().Split(' ');
+            //    valores = Console.ReadLine().Split(' ');
 
-                x = int.Parse(valores[0]);
-                y = int.Parse(valores[1]);
+            //    x = int.Parse(valores[0]);
+            //    y = int.Parse(valores[1]);
 
-            
-            }
+
+            //}
 
 
 
 
             //--------------------------------------------------------------------------------
+            //Um Posto de combustíveis deseja determinar qual de seus produtos tem a preferência de seus clientes.Escreva
+            //um algoritmo para ler o tipo de combustível abastecido (codificado da seguinte forma: 1.Álcool 2.Gasolina 3.Diesel
+            //4.Fim). Caso o usuário informe um código inválido(fora da faixa de 1 a 4) deve ser solicitado um novo código(até
+            //que seja válido). O programa será encerrado quando o código informado for o número 4. Deve ser escrito a
+            //mensagem: "MUITO OBRIGADO" e a quantidade de clientes que abasteceram cada tipo de combustível, conforme
+            //exemplo
 
 
 
+            //int alcool = 0;
+            //int gasolina = 0;
+            //int diesel = 0;
+
+            //int tipo = int.Parse(Console.ReadLine());
+
+
+            //while (tipo != 4)
+            //{
+            //    if (tipo == 1)
+            //       alcool = alcool + 1;
+
+            //    else if (tipo == 2)
+            //        gasolina = gasolina + 1;
+
+            //    else if (tipo == 3);
+            //        diesel = diesel + 1;
+
+            //    tipo = int.Parse(Console.ReadLine());
+
+
+            //}
+
+            //Console.WriteLine("Muito Obrigado");
+            //Console.WriteLine("Àlcool" + alcool);
+            //Console.WriteLine("Gasolina" + gasolina);
+            //Console.WriteLine("Diesel" + diesel);
+
+
+
+
+
+
+            //--------------------------------------------------------------------------------]
+            //for
+
+            //Console.Write("Quantos números inteiros você vai digitar?: ");
+            //int n = int.Parse(Console.ReadLine());
+
+            //int soma = 0;
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    Console.Write("Valor #{0}: ",i ); 
+            //    int valor = int.Parse(Console.ReadLine());
+            //    soma += valor;
+            //}
+            //Console.WriteLine("Soma igual a:" + soma);
+
+
+            //-------------------------------------------------------------
+            //Leia um valor inteiro X(1 <= X <= 1000).Em seguida mostre os ímpares de 1 até X, um valor por linha, inclusive o
+            //  X, se for o caso.
+
+            //Console.Write("Informe um número: ");
+            //int x = int.Parse(Console.ReadLine());
+
+
+            //for (int i = 1; i <= x; i++) 
+            //{
+            //    if (i % 2 != 0)
+            //        Console.WriteLine(i);
+            //}
+
+            //----------------------------------------------------------------
+            //Leia um valor inteiro N.Este valor será a quantidade de valores inteiros X que serão lidos em seguida.
+            //Mostre quantos destes valores X estão dentro do intervalo[10, 20] e quantos estão fora do intervalo, mostrando
+            //essas informações conforme exemplo(use a palavra "in" para dentro do intervalo, e "out" para fora do intervalo).
+
+            //Console.Write("Informe um número");
+            //int N = int.Parse(Console.ReadLine());
+
+            //int cont_in = 0;
+            //int cont_out = 0;
+            //for (int i = 0; i < N; i++)
+            //{
+            //    int x = int.Parse(Console.ReadLine());
+            //    if (x >= 10 && x <= 20)
+            //        cont_in = cont_in + 1;
+
+            //    else
+            //        cont_out = cont_out + 1;
+
+            //}
+
+            //Console.WriteLine("Valores dentro do intervalo: " + cont_in);
+            //Console.WriteLine("Valores fora do intervalo: " + cont_out);
+
+
+            //----------------------------------------------------------------
+            //Leia 1 valor inteiro N, que representa o número de casos de teste que vem a seguir. Cada caso de teste consiste
+            //de 3 valores reais, cada um deles com uma casa decimal.Apresente a média ponderada para cada um destes
+            //conjuntos de 3 valores, sendo que o primeiro valor tem peso 2, o segundo valor tem peso 3 e o terceiro valor tem
+            //peso 5.
+
+            //int N = int.Parse(Console.ReadLine());
+
+            //for (int i = 0; i < N; i ++)
+            //{
+            //    string[] line = Console.ReadLine().Split(' ');
+
+            //    double a = double.Parse(line[0], CultureInfo.InvariantCulture);
+            //    double b = double.Parse(line[1], CultureInfo.InvariantCulture);
+            //    double c = double.Parse(line[2], CultureInfo.InvariantCulture);
+
+            //    double media = (a * 2.0 + b * 3.0 + c * 5.0) / 10.0;
+
+            //    Console.WriteLine(media.ToString("F1", CultureInfo.InvariantCulture));
+            //}
+
+
+
+            //----------------------------------------------------------------
+            //Fazer um programa para ler um número N. Depois leia N pares de números e mostre a divisão do primeiro pelo
+            //segundo.Se o denominador for igual a zero, mostrar a mensagem "divisao impossivel".
+
+
+
+
+
+
+            //----------------------------------------------------------------
 
 
 
