@@ -9,6 +9,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Runtime.Intrinsics.Arm;
 using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography;
+using System.Transactions;
 
 
 
@@ -706,40 +707,165 @@ namespace ExercicioUm
 
 
 
-            Console.Write("Informe um número: ");
-            int N = int.Parse(Console.ReadLine());
+            //Console.Write("Informe um número: ");
+            //int N = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < N; i++)
-            {
-                string[] line = Console.ReadLine().Split(' ');
-                int x = int.Parse(line[0]);
-                int y = int.Parse(line[1]);
+            //for (int i = 0; i < N; i++)
+            //{
+            //    string[] line = Console.ReadLine().Split(' ');
+            //    int x = int.Parse(line[0]);
+            //    int y = int.Parse(line[1]);
 
-                if (y == 0)
+            //    if (y == 0)
 
-                    Console.WriteLine("Divisão impossivel");
+            //        Console.WriteLine("Divisão impossivel");
 
-                else
-                {
-                    double div = (double)x / y;
-                    Console.WriteLine(div.ToString("F1", CultureInfo.InvariantCulture));
-                }
+            //    else
+            //    {
+            //        double div = (double) x / y;
+            //        Console.WriteLine(div.ToString("F1", CultureInfo.InvariantCulture));
+            //    }
 
-            }
+            //}
 
-                //----------------------------------------------------------------
+            //----------------------------------------------------------------
+            //exercício para calcular a área de um triângulo X e um triângulo Y e mostrar qual deles tem a maior área
+            // Sem usar orientação a objetos
+
+            //double xA, xB, xC, yA, yB, yC;
+            //Console.WriteLine("Entre com as medidas do triângulo X: ");
+
+            //xA  = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //xB  = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //xC  = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+
+            //Console.WriteLine("Entre com as medidas do triângulo Y: ");
+
+            //yA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //yB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //yC = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            //double p = (xA + xB + xC) / 2.0;
+            //double areaX = Math.Sqrt(p * (p - xA) * (p - xB) * (p - xC));
+
+            //p = (yA + yB + yC) / 2.0;
+            //double areaY = Math.Sqrt(p * (p - yA) * (p - yB) * (p - yC));
+
+            //Console.WriteLine($"A area de X = : {areaX.ToString("F4",CultureInfo.InvariantCulture )}");
+            //Console.WriteLine($"A area de Y = : {areaY.ToString("F4",CultureInfo.InvariantCulture )}");
+
+
+            //if (areaX > areaY)
+            //    Console.WriteLine("Maior area: X");
+
+            //else
+            //    Console.WriteLine("Maior área: Y");
+
+
+
+            //----------------------------------------------------------------
+            //exercício para calcular a área de um triângulo X e um triângulo Y e mostrar qual deles tem a maior área
+            // Usando orientação a objetos
+
+            //Triangulo x, y;
+            //x = new Triangulo();
+            //y = new Triangulo();
+
+            //Console.WriteLine("Entre com as medidas do triângulo X: ");
+
+            //x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            //Console.WriteLine("Entre com as medidas do triângulo Y: ");
+
+            //y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            //double p = (x.A + x.B + x.C) / 2.0;
+            //double areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
+
+            //p = (y.A + y.B + y.C) / 2.0;
+            //double areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
+
+            //Console.WriteLine($"A area de X = : {areaX.ToString("F4", CultureInfo.InvariantCulture)}");
+            //Console.WriteLine($"A area de Y = : {areaY.ToString("F4", CultureInfo.InvariantCulture)}");
+
+
+            //if (areaX > areaY)
+            //    Console.WriteLine("Maior area: X");
+
+            //else
+            //    Console.WriteLine("Maior área: Y");
+
+            //----------------------------------------------------------------
+            //Capítulo: Introdução à Programação Orientada a Objetos
+            //Primeiros exercícios
+            //EXERCÍCIO 01:
+            //Fazer um programa para ler os dados de duas pessoas, depois mostrar o nome da pessoa mais
+            //velha
+
+            //Pessoa pessoa01, pessoa02;
+            //pessoa01 = new Pessoa();
+            //pessoa02 = new Pessoa();
+
+            //Console.WriteLine("Informe o nome da primeira pessoa:");         
+            //pessoa01.Nome = Console.ReadLine();
+            //Console.Clear();
+            //Console.WriteLine("Informe a idade da primeira pessoa:");
+            //pessoa01.Idade = int.Parse(Console.ReadLine());
+            //Console.Clear();
+
+            //Console.WriteLine("Informe o nome da segunda pessoa:");           
+            //pessoa02.Nome = Console.ReadLine();
+            //Console.Clear();
+            //Console.WriteLine("Informe a idade da segunda pessoa:");
+            //pessoa02.Idade = int.Parse(Console.ReadLine());
+            //Console.Clear();
+
+            //if (pessoa01.Idade > pessoa02.Idade)
+            //    Console.WriteLine($"A pessoa mmais velha é: {pessoa01.Nome}");
+            //else
+            //    Console.WriteLine($"A pessoa mais velha é: {pessoa02.Nome}");
+
+            //----------------------------------------------------------------
+            //EXERCÍCIO 02:
+            //Fazer um programa para ler nome e salário de dois funcionários.Depois, mostrar o salário
+            //médio dos funcionários.
+
+
+            //Funcionario f1 = new Funcionario();
+            //Funcionario f2 = new Funcionario();
+
+            //Console.WriteLine("Informe o nome do primeiro funcionário:");
+            //f1.Nome = Console.ReadLine();
+            //Console.Clear();
+            //Console.WriteLine("Informe o salário do primeiro funcionário:");
+            //f1.Salario = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //Console.Clear();
+
+            //Console.WriteLine("Informe o nome do segundo funcionário:");
+            //f2.Nome = Console.ReadLine();
+            //Console.Clear();
+            //Console.WriteLine("Informe o salário do segundo funcionário:");
+            //f2.Salario = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //Console.Clear();
+
+            //double media = (f1.Salario + f2.Salario) / 2.0;
+
+            //Console.WriteLine("O salário médio dos funcionários é: " + media.ToString("F2",CultureInfo.InvariantCulture));
+
+            //----------------------------------------------------------------
 
 
 
 
 
 
-
-
-
-
-            }
         }
+
+    }
     }
 
 
