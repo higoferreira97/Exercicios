@@ -857,7 +857,51 @@ namespace ExercicioUm
             //Console.WriteLine("O salário médio dos funcionários é: " + media.ToString("F2",CultureInfo.InvariantCulture));
 
             //----------------------------------------------------------------
+            //Refeito o exercicio do Triangulo^~Triangulo, mas usando a logica dentro da classe Triangulo
 
+            //Triangulo x, y;
+            //x = new Triangulo();
+            //y = new Triangulo();
+
+            //Console.WriteLine("Entre com as medidas do triângulo X: ");
+
+            //x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            //Console.WriteLine("Entre com as medidas do triângulo Y: ");
+
+            //y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            //double areaX = x.Area();
+
+            //double areaY = y.Area();
+
+            //Console.WriteLine($"A area de X = : {areaX.ToString("F4", CultureInfo.InvariantCulture)}");
+            //Console.WriteLine($"A area de Y = : {areaY.ToString("F4", CultureInfo.InvariantCulture)}");
+
+
+            //if (areaX > areaY)
+            //    Console.WriteLine("Maior area: X");
+
+            //else
+            //    Console.WriteLine("Maior área: Y");
+
+
+            //----------------------------------------------------------------
+
+            Produto produto = new Produto();
+            Console.WriteLine("Entre com os dados do produto: ");
+            Console.Write("Nome:");
+            produto.Nome = Console.ReadLine();
+            Console.Write("Preço:");
+            produto.Preco = double.Parse(Console.ReadLine());
+            Console.Write("Quantidade:");
+            produto.Quantidade = int.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+
+            Console.WriteLine("Dados do produto:" + produto.Nome, produto.Preco, produto.Quantidade);
 
 
 
