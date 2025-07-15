@@ -1,5 +1,7 @@
 ﻿
 
+using System.Globalization;
+
 namespace ExercicioUm
 {
     class Produto
@@ -16,7 +18,24 @@ namespace ExercicioUm
 
         public void AdicionarProdutos(int quantidade)
         {
-
+            Quantidade += quantidade;
         }
+
+        public void RemoverProdutos(int quantidade)
+        {
+            Quantidade -= quantidade;
+        }
+
+        public override string ToString()
+        {
+            return Nome + ", R$" + Preco.ToString("F2",CultureInfo.InvariantCulture) 
+                + ", " 
+                + Quantidade 
+                + " Unidades, total: R$" 
+                + ValorTotalEmEstoque().ToString("F2",CultureInfo.InvariantCulture);
+        }
+
+        
     }
+
 }

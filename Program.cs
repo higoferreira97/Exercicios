@@ -891,17 +891,58 @@ namespace ExercicioUm
 
 
             //----------------------------------------------------------------
+            //Exercicio para mostrar dados de um produto adicionando mais produtos e removendo
 
-            Produto produto = new Produto();
-            Console.WriteLine("Entre com os dados do produto: ");
-            Console.Write("Nome:");
-            produto.Nome = Console.ReadLine();
-            Console.Write("Preço:");
-            produto.Preco = double.Parse(Console.ReadLine());
-            Console.Write("Quantidade:");
-            produto.Quantidade = int.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //Produto produto = new Produto();
+            //Console.WriteLine("Entre com os dados do produto: ");
+            //Console.Write("Nome:");
+            //produto.Nome = Console.ReadLine();
+            //Console.Write("Preço:");
+            //produto.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //Console.Write("Quantidade:");
+            //produto.Quantidade = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Dados do produto:" + produto.Nome, produto.Preco, produto.Quantidade);
+            //Console.WriteLine();
+            //Console.WriteLine("Dados do produto:" + produto);
+
+            //Console.WriteLine();
+            //Console.Write("Digite o número de produtos a ser adicionado ao estoque: ");
+            //int qte = int.Parse(Console.ReadLine());
+            //produto.AdicionarProdutos(qte);
+
+            //Console.WriteLine();
+            //Console.WriteLine("Dados atualizados " + produto);
+
+            //Console.WriteLine();
+            //Console.Write("Digite o núemro de produtos a ser removidos: ");
+            //qte = int.Parse(Console.ReadLine());
+            //produto.RemoverProdutos(qte);
+
+            //Console.WriteLine();
+            //Console.WriteLine("Dados atualizados " + produto);
+
+            //---------------------------------------------
+
+            //Fazer um programa para ler os valores da largura e altura
+            //de um retângulo. Em seguida, mostrar na tela o valor de
+            //sua área, perímetro e diagonal.Usar uma classe como
+            //mostrado no projeto ao lado.
+
+            Retangulo retangulo = new Retangulo();
+
+            Console.Write("Informe a largura do Retângulo: ");
+            retangulo.Largura = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            Console.WriteLine();
+
+            Console.Write("Informe a altura do Retângulo: ");
+            retangulo.Altura = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            Console.WriteLine();
+
+            Console.WriteLine("Dados Atualizados: " + retangulo);
+
+
+
+
 
 
 
