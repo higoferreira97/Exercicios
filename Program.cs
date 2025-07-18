@@ -928,17 +928,56 @@ namespace ExercicioUm
             //sua área, perímetro e diagonal.Usar uma classe como
             //mostrado no projeto ao lado.
 
-            Retangulo retangulo = new Retangulo();
+            //Retangulo retangulo = new Retangulo();
 
-            Console.Write("Informe a largura do Retângulo: ");
-            retangulo.Largura = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //Console.Write("Informe a largura do Retângulo: ");
+            //retangulo.Largura = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //Console.WriteLine();
+
+            //Console.Write("Informe a altura do Retângulo: ");
+            //retangulo.Altura = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //Console.WriteLine();
+
+            //Console.WriteLine("Dados Atualizados: " + retangulo);
+
+            //-----------------------------------------------------------------------
+
+            //Fazer um programa para ler os dados de um funcionário(nome,
+            //salário bruto e imposto). Em seguida, mostrar os dados do
+            //funcionário(nome e salário líquido).Em seguida, aumentar o salário
+            //do funcionário com base em uma porcentagem dada(somente o
+            //salário bruto é afetado pela porcentagem) e mostrar novamente os
+            //dados do funcionário.Use a classe projetada abaixo.
+
+            Funcionario funcionario = new Funcionario();
+
+            Console.Write("Informe o nome do funcionário: ");
+            funcionario.Nome = Console.ReadLine();
             Console.WriteLine();
 
-            Console.Write("Informe a altura do Retângulo: ");
-            retangulo.Altura = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            Console.Write("Informe o salário Bruto: ");
+            funcionario.SalarioBruto = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
             Console.WriteLine();
 
-            Console.WriteLine("Dados Atualizados: " + retangulo);
+            Console.Write("Agora informe o imposto: ");
+            funcionario.Imposto = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            Console.WriteLine();
+
+            Console.WriteLine("Dados atualizados: " + funcionario);
+            Console.WriteLine();
+
+            Console.Write("Agora adicione um aumento percentual de salário: ");
+            double percntual = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            funcionario.AumentarSalario(percntual);
+            Console.WriteLine();
+
+            Console.WriteLine("Dados atualizados: " + funcionario);
+
+
+
+
+
+
 
 
 
@@ -951,7 +990,7 @@ namespace ExercicioUm
         }
 
     }
-    }
+}
 
 
 
