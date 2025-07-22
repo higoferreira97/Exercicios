@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Globalization;
 using System.Net;
@@ -949,31 +950,63 @@ namespace ExercicioUm
             //salário bruto é afetado pela porcentagem) e mostrar novamente os
             //dados do funcionário.Use a classe projetada abaixo.
 
-            Funcionario funcionario = new Funcionario();
+            //Funcionario funcionario = new Funcionario();
 
-            Console.Write("Informe o nome do funcionário: ");
-            funcionario.Nome = Console.ReadLine();
+            //Console.Write("Informe o nome do funcionário: ");
+            //funcionario.Nome = Console.ReadLine();
+            //Console.WriteLine();
+
+            //Console.Write("Informe o salário Bruto: ");
+            //funcionario.SalarioBruto = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //Console.WriteLine();
+
+            //Console.Write("Agora informe o imposto: ");
+            //funcionario.Imposto = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //Console.WriteLine();
+
+            //Console.WriteLine("Dados atualizados: " + funcionario);
+            //Console.WriteLine();
+
+            //Console.Write("Agora adicione um aumento percentual de salário: ");
+            //double percntual = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //funcionario.AumentarSalario(percntual);
+            //Console.WriteLine();
+
+            //Console.WriteLine("Dados atualizados: " + funcionario);
+
+            //-------------------------------------------------------
+            //Fazer um programa para ler o nome de um aluno e as três notas que ele obteve nos três trimestres do ano
+            //(primeiro trimestre vale 30 e o segundo e terceiro valem 35 cada).Ao final, mostrar qual a nota final do aluno no
+            //ano.Dizer também se o aluno está APROVADO ou REPROVADO e, em caso negativo, quantos pontos faltam
+            //para o aluno obter o mínimo para ser aprovado(que é 60 pontos). Você deve criar uma classe Aluno para resolver
+            //este problema.
+
+            Aluno aluno = new Aluno();
+
+            Console.Write("Informe seu Nome:");
+            aluno.Nome = Console.ReadLine();
+            Console.Write("Informe a primeira nota: ");
             Console.WriteLine();
-
-            Console.Write("Informe o salário Bruto: ");
-            funcionario.SalarioBruto = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            aluno.Nota1 = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            Console.Write("Informe a segunda nota: ");
             Console.WriteLine();
-
-            Console.Write("Agora informe o imposto: ");
-            funcionario.Imposto = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            aluno.Nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Informe a terceira nota: ");
             Console.WriteLine();
-
-            Console.WriteLine("Dados atualizados: " + funcionario);
-            Console.WriteLine();
-
-            Console.Write("Agora adicione um aumento percentual de salário: ");
-            double percntual = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
-            funcionario.AumentarSalario(percntual);
-            Console.WriteLine();
-
-            Console.WriteLine("Dados atualizados: " + funcionario);
+            aluno.Nota3 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
 
+            if (aluno.Aprovado() == true)
+            
+                Console.WriteLine(aluno + "Aprovado!");
+                
+            else  
+                Console.WriteLine(aluno + " " + "Reprovado!" + " " + "Faltam" 
+                    + " " + aluno.NotaRestante().ToString("F2", CultureInfo.InvariantCulture) 
+                    + " " + "Pontos para você ser aprovado");
+                
+            
+                
 
 
 

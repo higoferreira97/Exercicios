@@ -4,7 +4,7 @@ using System.Globalization;
 
 namespace ExercicioUm
 {
-    class Produto
+    public class Produto
     {
         public string Nome;
         public double Preco;
@@ -13,7 +13,7 @@ namespace ExercicioUm
         public double ValorTotalEmEstoque()
         {
             return Preco * Quantidade;
-            
+
         }
 
         public void AdicionarProdutos(int quantidade)
@@ -28,14 +28,14 @@ namespace ExercicioUm
 
         public override string ToString()
         {
-            return Nome + ", R$" + Preco.ToString("F2",CultureInfo.InvariantCulture) 
-                + ", " 
-                + Quantidade 
-                + " Unidades, total: R$" 
-                + ValorTotalEmEstoque().ToString("F2",CultureInfo.InvariantCulture);
+            return Nome + ", R$" + Preco.ToString("F2", CultureInfo.InvariantCulture)
+                + ", "
+                + Quantidade
+                + " Unidades, total: R$"
+                + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
 
-        
+
     }
 
 }
