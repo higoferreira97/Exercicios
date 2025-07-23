@@ -17,7 +17,9 @@ using System.Transactions;
 namespace ExercicioUm
 {
     class Program
+
     {
+        
         static void Main(string[] args)
         {
             //string produto1 = "Computador";
@@ -981,46 +983,54 @@ namespace ExercicioUm
             //para o aluno obter o mínimo para ser aprovado(que é 60 pontos). Você deve criar uma classe Aluno para resolver
             //este problema.
 
-            Aluno aluno = new Aluno();
+            //Aluno aluno = new Aluno();
 
-            Console.Write("Informe seu Nome:");
-            aluno.Nome = Console.ReadLine();
-            Console.Write("Informe a primeira nota: ");
-            Console.WriteLine();
-            aluno.Nota1 = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
-            Console.Write("Informe a segunda nota: ");
-            Console.WriteLine();
-            aluno.Nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Informe a terceira nota: ");
-            Console.WriteLine();
-            aluno.Nota3 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //Console.Write("Informe seu Nome:");
+            //aluno.Nome = Console.ReadLine();
+            //Console.Write("Informe a primeira nota: ");
+            //Console.WriteLine();
+            //aluno.Nota1 = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //Console.Write("Informe a segunda nota: ");
+            //Console.WriteLine();
+            //aluno.Nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //Console.Write("Informe a terceira nota: ");
+            //Console.WriteLine();
+            //aluno.Nota3 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
 
-            if (aluno.Aprovado() == true)
+            //if (aluno.Aprovado() == true)
+
+            //    Console.WriteLine(aluno + "Aprovado!");
+
+            //else  
+            //    Console.WriteLine(aluno + " " + "Reprovado!" + " " + "Faltam" 
+            //        + " " + aluno.NotaRestante().ToString("F2", CultureInfo.InvariantCulture) 
+            //        + " " + "Pontos para você ser aprovado");
+
+            //---------------------------------------------------------------------------------------
+            //Criar um progruama que calcule a circunferência e volume  valor de umraio.
+            //Criar método estático
+            //V1
+
+           
             
-                Console.WriteLine(aluno + "Aprovado!");
-                
-            else  
-                Console.WriteLine(aluno + " " + "Reprovado!" + " " + "Faltam" 
-                    + " " + aluno.NotaRestante().ToString("F2", CultureInfo.InvariantCulture) 
-                    + " " + "Pontos para você ser aprovado");
-                
+            Console.Write("Entre com o valor do raio:");
+            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double circ = Calculadora.Circuferencia(raio);
+            double volume = Calculadora.Volume(raio);
+
+            Console.WriteLine("Circunferência:" + circ.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine($"Volume: {volume.ToString("F2", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"Valor de Pi: {Calculadora.pi.ToString("F2", CultureInfo.InvariantCulture)}");
+
             
-                
-
-
-
-
-
-
-
-
-
-
-
 
 
         }
+
+        
+        
 
     }
 }
