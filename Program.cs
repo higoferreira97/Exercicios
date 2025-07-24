@@ -1012,18 +1012,32 @@ namespace ExercicioUm
             //Criar método estático
             //V1
 
-           
-            
-            Console.Write("Entre com o valor do raio:");
-            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double circ = Calculadora.Circuferencia(raio);
-            double volume = Calculadora.Volume(raio);
 
-            Console.WriteLine("Circunferência:" + circ.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine($"Volume: {volume.ToString("F2", CultureInfo.InvariantCulture)}");
-            Console.WriteLine($"Valor de Pi: {Calculadora.pi.ToString("F2", CultureInfo.InvariantCulture)}");
+            //Console.Write("Entre com o valor do raio:");
+            //double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+            //double circ = Calculadora.Circuferencia(raio);
+            //double volume = Calculadora.Volume(raio);
+
+            //Console.WriteLine("Circunferência:" + circ.ToString("F2", CultureInfo.InvariantCulture));
+            //Console.WriteLine($"Volume: {volume.ToString("F2", CultureInfo.InvariantCulture)}");
+            //Console.WriteLine($"Valor de Pi: {Calculadora.pi.ToString("F2", CultureInfo.InvariantCulture)}");
+
+            //-------------------------------------------------------------------------
+            //Crie um programa que leia a cotação do dólar e, em seguida, o valor em dólares que uma pessoa deseja comprar.
+            //O programa deve informar quantos reais serão necessários para a compra, considerando também a cobrança de 6% de IOF
+            //sobre o valor em dólares. Para isso, implemente uma classe chamada ConversorDeMoeda, responsável pelos cálculos.
+
+            Console.Write("Informe a contação do dolar!");
+            double cotação = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            Console.WriteLine();
+            Console.WriteLine("Informe a quantia a ser comprada!");
+            double quantia = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            Console.WriteLine();
+
+            double result = ConversorDeMoeda.DolarParareal(cotação,quantia);
+            Console.WriteLine("O valor a ser pago em reais é:" + result.ToString("F2",CultureInfo.InvariantCulture));
             
 
 
