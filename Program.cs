@@ -19,7 +19,7 @@ namespace ExercicioUm
     class Program
 
     {
-        
+
         static void Main(string[] args)
         {
             //string produto1 = "Computador";
@@ -1029,22 +1029,52 @@ namespace ExercicioUm
             //O programa deve informar quantos reais serão necessários para a compra, considerando também a cobrança de 6% de IOF
             //sobre o valor em dólares. Para isso, implemente uma classe chamada ConversorDeMoeda, responsável pelos cálculos.
 
-            Console.Write("Informe a contação do dolar!");
-            double cotação = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
-            Console.WriteLine();
-            Console.WriteLine("Informe a quantia a ser comprada!");
-            double quantia = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
-            Console.WriteLine();
+            //Console.Write("Informe a contação do dolar!");
+            //double cotação = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //Console.WriteLine();
+            //Console.WriteLine("Informe a quantia a ser comprada!");
+            //double quantia = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            //Console.WriteLine();
 
-            double result = ConversorDeMoeda.DolarParareal(cotação,quantia);
-            Console.WriteLine("O valor a ser pago em reais é:" + result.ToString("F2",CultureInfo.InvariantCulture));
-            
+            //double result = ConversorDeMoeda.DolarParareal(cotação,quantia);
+            //Console.WriteLine("O valor a ser pago em reais é:" + result.ToString("F2",CultureInfo.InvariantCulture));
 
+            //--------------------------------------------------------------------------
+            //Criar a classe Produto usando o construtor
+
+            Console.WriteLine("Entre com os dados do produto: ");
+            Console.Write("Nome:");
+            string nome = Console.ReadLine();
+            Console.Write("Preço:");
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Quantidade:");
+            int quantidade = int.Parse(Console.ReadLine());
+
+            Produto produto = new Produto(nome, preco, quantidade);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados do produto:" + produto);
+
+            Console.WriteLine();
+            Console.Write("Digite o número de produtos a ser adicionado ao estoque: ");
+            int qte = int.Parse(Console.ReadLine());
+            produto.AdicionarProdutos(qte);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados " + produto);
+
+            Console.WriteLine();
+            Console.Write("Digite o núemro de produtos a ser removidos: ");
+            qte = int.Parse(Console.ReadLine());
+            produto.RemoverProdutos(qte);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados " + produto);
 
         }
 
-        
-        
+
+
 
     }
 }
