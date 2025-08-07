@@ -1076,31 +1076,61 @@ namespace ExercicioUm
 
 
             //------------------------------------------------------
-            
 
 
-            var connectionString = "";
 
-            try
-            {
-                using var conn = new NpgsqlConnection(connectionString);
-                conn.Open();
-                Console.WriteLine("✅ Conexão bem-sucedida com o PostgreSQL!");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("❌ Falha na conexão:");
-                Console.WriteLine(ex.Message);
-            }
+            //var connectionString = "";
+
+            //try
+            //{
+            //    using var conn = new NpgsqlConnection(connectionString);
+            //    conn.Open();
+            //    Console.WriteLine("✅ Conexão bem-sucedida com o PostgreSQL!");
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("❌ Falha na conexão:");
+            //    Console.WriteLine(ex.Message);
+            //}
 
             //------------------------------------------------------
+            //Criar um código que execute um construtor com sobrecarga
+
+            Console.WriteLine("Entre com os dados do produto: ");
+            Console.Write("Nome:");
+            string nome = Console.ReadLine();
+            Console.Write("Preço:");
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
 
+            Produto produto = new Produto(nome, preco);
+            Produto p2 = new Produto();
+            Produto p3 = new Produto()
+            {
+                Nome = "TV", 
+                Preco = 900.00, 
+                Quantidade = 10
+            };
 
 
+            Console.WriteLine();
+            Console.WriteLine("Dados do produto:" + produto);
 
+            Console.WriteLine();
+            Console.Write("Digite o número de produtos a ser adicionado ao estoque: ");
+            int qte = int.Parse(Console.ReadLine());
+            produto.AdicionarProdutos(qte);
 
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados " + produto);
 
+            Console.WriteLine();
+            Console.Write("Digite o núemro de produtos a ser removidos: ");
+            qte = int.Parse(Console.ReadLine());
+            produto.RemoverProdutos(qte);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados " + produto);
 
 
         }
