@@ -1,21 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Diagnostics.Metrics;
-using System.Drawing;
-using System.Globalization;
-using System.Net;
-using System.Reflection.Emit;
-using System.Runtime.ConstrainedExecution;
-using System.Runtime.Intrinsics.Arm;
-using System.Runtime.Intrinsics.X86;
-using System.Security.Cryptography;
-using System.Transactions;
-using System.Data.SqlClient;
-using Npgsql;
-
-
-
+﻿using System.Globalization;
 
 namespace ExercicioUm
 {
@@ -1096,44 +1079,122 @@ namespace ExercicioUm
             //------------------------------------------------------
             //Criar um código que execute um construtor com sobrecarga
 
-            Console.WriteLine("Entre com os dados do produto: ");
-            Console.Write("Nome:");
-            string nome = Console.ReadLine();
-            Console.Write("Preço:");
-            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //Console.WriteLine("Entre com os dados do produto: ");
+            //Console.Write("Nome:");
+            //string nome = Console.ReadLine();
+            //Console.Write("Preço:");
+            //double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
 
-            Produto produto = new Produto(nome, preco);
-            Produto p2 = new Produto();
-            Produto p3 = new Produto()
+            //Produto produto = new Produto(nome, preco);
+            //Produto p2 = new Produto();
+            //Produto p3 = new Produto()
+            //{
+            //    Nome = "TV", 
+            //    Preco = 900.00, 
+            //    Quantidade = 10
+            //};
+
+
+            //Console.WriteLine();
+            //Console.WriteLine("Dados do produto:" + produto);
+
+            //Console.WriteLine();
+            //Console.Write("Digite o número de produtos a ser adicionado ao estoque: ");
+            //int qte = int.Parse(Console.ReadLine());
+            //produto.AdicionarProdutos(qte);
+
+            //Console.WriteLine();
+            //Console.WriteLine("Dados atualizados " + produto);
+
+            //Console.WriteLine();
+            //Console.Write("Digite o núemro de produtos a ser removidos: ");
+            //qte = int.Parse(Console.ReadLine());
+            //produto.RemoverProdutos(qte);
+
+            //Console.WriteLine();
+            //Console.WriteLine("Dados atualizados " + produto);
+
+
+            //Produto p = new Produto("TV", 500.00, 10);
+            // //    Console.WriteLine("Infome o novo nome");
+            // //    p.Nome(Console.ReadLine());
+            // //    Console.Clear();
+            //     Console.WriteLine(p.Nome);
+            //     Console.WriteLine(p.Preco);
+            //     Console.WriteLine(p.Quantidade);
+
+
+
+
+            // p.Nome = "TV 4K";
+
+            //--------------------------------------------------
+            //Exercício de conta bancária 
+
+            ContaBancaria conta;
+
+            Console.Write("Informe o número da conta: ");
+            int numero = int.Parse(Console.ReadLine());
+            Console.Write("Informe o Nome do Titular: ");
+            string titular = Console.ReadLine();
+            Console.Write("Haverá depósito inicial? (S/N)? ");
+            string resp = Console.ReadLine().Trim().ToUpper();
+
+            if (resp == "S")
             {
-                Nome = "TV", 
-                Preco = 900.00, 
-                Quantidade = 10
-            };
+                Console.WriteLine("Informe o valor do Depósito");
+                double depositoInicial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                conta = new ContaBancaria(numero, titular, depositoInicial);
+            }
+            else
+            {
+                conta = new ContaBancaria(numero, titular);
 
-
-            Console.WriteLine();
-            Console.WriteLine("Dados do produto:" + produto);
-
-            Console.WriteLine();
-            Console.Write("Digite o número de produtos a ser adicionado ao estoque: ");
-            int qte = int.Parse(Console.ReadLine());
-            produto.AdicionarProdutos(qte);
+            }
 
             Console.WriteLine();
-            Console.WriteLine("Dados atualizados " + produto);
+            Console.WriteLine("Dados da conta:");
+            Console.WriteLine(conta);
 
             Console.WriteLine();
-            Console.Write("Digite o núemro de produtos a ser removidos: ");
-            qte = int.Parse(Console.ReadLine());
-            produto.RemoverProdutos(qte);
+            Console.Write("Entre com um valor para depósito: ");
+            double quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            while (quantia <= 0 || quantia == null)
+            {
+                Console.WriteLine("Valor inválido tente novamente");
+                quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            }
+
+            conta.Deposito(quantia);
+            Console.WriteLine();
+            Console.WriteLine("Dados da conta:");
+            Console.WriteLine(conta);
 
             Console.WriteLine();
-            Console.WriteLine("Dados atualizados " + produto);
+            Console.Write("Entre com um valor para Saque: ");
+            quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            while (quantia <= 0 || quantia == null)
+            {
+                Console.WriteLine("Valor inválido tente novamente");
+                quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            }
+
+            conta.Saque(quantia);
+            Console.WriteLine();
+            Console.WriteLine("Dados da conta:");
+            Console.WriteLine(conta);
+
+
+
+
+
 
 
         }
+
 
 
 
