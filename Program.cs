@@ -1132,62 +1132,110 @@ namespace ExercicioUm
             //--------------------------------------------------
             //Exercício de conta bancária 
 
-            ContaBancaria conta;
+            //ContaBancaria conta;
 
-            Console.Write("Informe o número da conta: ");
-            int numero = int.Parse(Console.ReadLine());
-            Console.Write("Informe o Nome do Titular: ");
-            string titular = Console.ReadLine();
-            Console.Write("Haverá depósito inicial? (S/N)? ");
-            string resp = Console.ReadLine().Trim().ToUpper();
+            //Console.Write("Informe o número da conta: ");
+            //int numero = int.Parse(Console.ReadLine());
+            //Console.Write("Informe o Nome do Titular: ");
+            //string titular = Console.ReadLine();
+            //Console.Write("Haverá depósito inicial? (S/N)? ");
+            //string resp = Console.ReadLine().Trim().ToUpper();
 
-            if (resp == "S")
+            //if (resp == "S")
+            //{
+            //    Console.WriteLine("Informe o valor do Depósito");
+            //    double depositoInicial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //    conta = new ContaBancaria(numero, titular, depositoInicial);
+            //}
+            //else
+            //{
+            //    conta = new ContaBancaria(numero, titular);
+
+            //}
+
+            //Console.WriteLine();
+            //Console.WriteLine("Dados da conta:");
+            //Console.WriteLine(conta);
+
+            //Console.WriteLine();
+            //Console.Write("Entre com um valor para depósito: ");
+            //double quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            //while (quantia <= 0 || quantia == null)
+            //{
+            //    Console.WriteLine("Valor inválido tente novamente");
+            //    quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //}
+
+            //conta.Deposito(quantia);
+            //Console.WriteLine();
+            //Console.WriteLine("Dados da conta:");
+            //Console.WriteLine(conta);
+
+            //Console.WriteLine();
+            //Console.Write("Entre com um valor para Saque: ");
+            //quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            //while (quantia <= 0 || quantia == null)
+            //{
+            //    Console.WriteLine("Valor inválido tente novamente");
+            //    quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //}
+
+            //conta.Saque(quantia);
+            //Console.WriteLine();
+            //Console.WriteLine("Dados da conta:");
+            //Console.WriteLine(conta);
+
+
+
+            //---------------------------- 
+            //Exercicio para calcular a media de altura entre três pessoas
+
+            //int n = int.Parse(Console.ReadLine());
+
+            //double[] vect = new double[n];
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    vect[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //}
+
+
+
+            //double soma = 0.0;
+            //for (int i = 0; i < n; i++)
+            //{
+            //    soma += vect[i];
+            //}
+
+            //double media = soma / n;
+
+            //Console.WriteLine(media.ToString("F2", CultureInfo.InvariantCulture));
+
+
+            //--------------------------------------------------
+
+            int n = int.Parse(Console.ReadLine());
+
+            Produto[] vect = new Produto[n];
+
+            for (int i = 0; i < n; i++)
             {
-                Console.WriteLine("Informe o valor do Depósito");
-                double depositoInicial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                conta = new ContaBancaria(numero, titular, depositoInicial);
+                string nome = Console.ReadLine();
+                double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                vect[i] = new Produto { Nome = nome, Preco = preco };
             }
-            else
+
+            double soma = 0.0;
+            for (int i = 0; i < n; i++)
             {
-                conta = new ContaBancaria(numero, titular);
-
+                soma += vect[i].Preco;
             }
 
-            Console.WriteLine();
-            Console.WriteLine("Dados da conta:");
-            Console.WriteLine(conta);
+            double media = soma / n;
 
-            Console.WriteLine();
-            Console.Write("Entre com um valor para depósito: ");
-            double quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            while (quantia <= 0 || quantia == null)
-            {
-                Console.WriteLine("Valor inválido tente novamente");
-                quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            }
-
-            conta.Deposito(quantia);
-            Console.WriteLine();
-            Console.WriteLine("Dados da conta:");
-            Console.WriteLine(conta);
-
-            Console.WriteLine();
-            Console.Write("Entre com um valor para Saque: ");
-            quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            while (quantia <= 0 || quantia == null)
-            {
-                Console.WriteLine("Valor inválido tente novamente");
-                quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            }
-
-            conta.Saque(quantia);
-            Console.WriteLine();
-            Console.WriteLine("Dados da conta:");
-            Console.WriteLine(conta);
-
-
+            Console.WriteLine(media.ToString("F2", CultureInfo.InvariantCulture));
 
 
 
