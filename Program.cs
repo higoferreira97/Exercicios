@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace ExercicioUm
+﻿namespace ExercicioUm
 {
     class Program
 
@@ -1216,39 +1214,71 @@ namespace ExercicioUm
 
             //--------------------------------------------------
 
+            //int n = int.Parse(Console.ReadLine());
+
+            //Produto[] vect = new Produto[n];
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    string nome = Console.ReadLine();
+            //    double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //    vect[i] = new Produto { Nome = nome, Preco = preco };
+            //}
+
+            //double soma = 0.0;
+            //for (int i = 0; i < n; i++)
+            //{
+            //    soma += vect[i].Preco;
+            //}
+
+            //double media = soma / n;
+
+            //Console.WriteLine(media.ToString("F2", CultureInfo.InvariantCulture));
+
+            //--------------------------------------------------
+
+            Estudante[] vect = new Estudante[10];
+            Console.Write("Quantos quartos serão alugados? ");
             int n = int.Parse(Console.ReadLine());
-
-            Produto[] vect = new Produto[n];
-
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
+                Console.WriteLine();
+                Console.WriteLine($"Aluguel #{i}:");
+                Console.Write("Nome: ");
                 string nome = Console.ReadLine();
-                double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                vect[i] = new Produto { Nome = nome, Preco = preco };
+                Console.Write("Email: ");
+                string email = Console.ReadLine();
+                Console.Write("Quarto: ");
+                int quarto = int.Parse(Console.ReadLine());
+                vect[quarto] = new Estudante(nome, email);
             }
-
-            double soma = 0.0;
-            for (int i = 0; i < n; i++)
+            Console.WriteLine();
+            Console.WriteLine("Quartos ocupados:");
+            for (int i = 0; i < 10; i++)
             {
-                soma += vect[i].Preco;
+                if (vect[i] != null)
+                {
+                    Console.WriteLine(i + ": " + vect[i]);
+                }
+
+
+
+
             }
-
-            double media = soma / n;
-
-            Console.WriteLine(media.ToString("F2", CultureInfo.InvariantCulture));
-
 
 
 
 
         }
-
-
-
-
-
     }
 }
+
+
+
+
+
+
+
 
 
 
