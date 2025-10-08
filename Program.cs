@@ -1236,35 +1236,147 @@
             //Console.WriteLine(media.ToString("F2", CultureInfo.InvariantCulture));
 
             //--------------------------------------------------
+            // Criar um programa que inicia com dez quartos vazios e depois leia uma quantidade N 
+            //representando o numero de estudantes que irão alugar.
+            //Estudante[] vect = new Estudante[10];
+            //Console.Write("Quantos quartos serão alugados? ");
+            //int n = int.Parse(Console.ReadLine());
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    Console.WriteLine();
+            //    Console.WriteLine($"Aluguel #{i}:");
+            //    Console.Write("Nome: ");
+            //    string nome = Console.ReadLine();
+            //    Console.Write("Email: ");
+            //    string email = Console.ReadLine();
+            //    Console.Write("Quarto: ");
+            //    int quarto = int.Parse(Console.ReadLine());
+            //    vect[quarto] = new Estudante(nome, email);
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("Quartos ocupados:");
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    if (vect[i] != null)
+            //    {
+            //        Console.WriteLine(i + ": " + vect[i]);
+            //    }
 
-            Estudante[] vect = new Estudante[10];
-            Console.Write("Quantos quartos serão alugados? ");
-            int n = int.Parse(Console.ReadLine());
-            for (int i = 1; i <= n; i++)
-            {
-                Console.WriteLine();
-                Console.WriteLine($"Aluguel #{i}:");
-                Console.Write("Nome: ");
-                string nome = Console.ReadLine();
-                Console.Write("Email: ");
-                string email = Console.ReadLine();
-                Console.Write("Quarto: ");
-                int quarto = int.Parse(Console.ReadLine());
-                vect[quarto] = new Estudante(nome, email);
-            }
-            Console.WriteLine();
-            Console.WriteLine("Quartos ocupados:");
-            for (int i = 0; i < 10; i++)
-            {
-                if (vect[i] != null)
-                {
-                    Console.WriteLine(i + ": " + vect[i]);
-                }
+
+
+
+            //}
+
+            //int soma01 = Calculadora.Soma(1, 2);
+            //Console.WriteLine(soma01);
+
+            //int numero = 10;
+
+            //Calculadora.triplicar(ref numero);
+
+            //Console.WriteLine(numero);
+
+            //int numero = 10;
+            //int saida;
+
+            //Calculadora.TriplicarOut(numero, out saida);
+
+            //Console.WriteLine(saida);
+
+            //--------------------------------------
+            //string[] vetor = new string[] { "João", "Maria", "José" };
+
+            //foreach (string obj in vetor)
+            //{
+            //    Console.WriteLine(obj);
+            //}
+
+            //--------------------------
+
+            //Exercício usando List
+
+            //List<string> list = new List<string>();
+
+            //list.Add("Higo");
+            //list.Add("Aléx");
+            //list.Add("Bob");
+            //list.Add("Anna");
+            ////list.Insert(0, "Marco");
+
+
+            //foreach (var obj in list)
+            //{
+            //    Console.WriteLine(obj);
+            //}
+            //Console.WriteLine(list.Count);
+
+            ////List.Find busca o primeiro elemento com a condição informada
+            //string s1 = list.Find(x => x[0] == 'A');
+
+            //Console.WriteLine(s1);
+
+            ////List.FindLast busca o ultimo elemento com a condição informada
+            //string s2 = list.FindLast(x => x[0] == 'A');
+            //Console.WriteLine(s2);
+
+            ////static bool Teste(string s)
+            ////{
+            ////    return s[0] == 'A';
+            ////}
+
+
+            //int pos1 = list.FindIndex(x => x[0] == 'A');
+            //Console.WriteLine("Posição do primeiro elemento que começa com a condição: " + pos1);
+
+            //int pos2 = list.FindLastIndex(x => x[0] == 'A');
+            //Console.WriteLine("Posição do ultimo elemento que começa com a condição: " + pos2);
+
+            //Console.WriteLine("--------------------------------");
+            ////list.FindAll filtra os elementos com a quantidade de caracteres informados na condição.
+            //List<string> list2 = list.FindAll(x => x.Length == 5);
+
+            //Console.WriteLine(list2);
+            //foreach (string obj in list2)
+            //{
+            //    Console.WriteLine(obj);
+            //}
+            //Console.WriteLine("------------------");
+
+            ////Remove o elemento informado da lista
+            //list.Remove("Aléx");
+
+            //foreach (string obj in list)
+            //{
+            //    Console.WriteLine(obj);
+            //}
+            //Console.WriteLine("------------------");
+
+            ////Remove todos os elementos com a condição
+            //list.RemoveAll(x => x[0] == 'A');
+            //foreach (string obj in list)
+            //{
+            //    Console.WriteLine(obj);
+            //}
+
+            ////Remove o elemento da posição informada
+            //list.RemoveAt(2);
+            //foreach (string obj in list)
+            //{
+            //    Console.WriteLine(obj);
+            //}
+            ////Remove todos os elemento a partir da posição informada
+            ////Nesse exemplo: A partir da posição 2, remove 3 elementos
+            //list.RemoveRange(2, 1);
+            //foreach (string obj in list)
+            //{
+            //    Console.WriteLine(obj);
+            //}
+
+            //-----------------------------
 
 
 
 
-            }
 
 
 
